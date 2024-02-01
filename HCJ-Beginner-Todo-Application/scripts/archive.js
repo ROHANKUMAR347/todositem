@@ -42,6 +42,7 @@ function updateTodoList() {
       let todos = JSON.parse(localStorage.getItem("todos")) || [];
       todos.push(todoItm[0]);
       localStorage.setItem("todos", JSON.stringify(todos));
+      updateTodoList();
     });
     restoreCell.append(restorebtn);
     let deleteBtn = document.createElement("button");
